@@ -1,0 +1,24 @@
+// const [fetchUser, setFetchUser] = useState(null);
+  // const [inputEmail, setInputEmail] = useState("");
+
+  // const handleFetch = () => {
+  //   setFetchUser(JSON.parse(localStorage.getItem(`user_${inputEmail}`)));
+  //   toast("Data Fetched Successfully");
+
+  //   setInputEmail("");
+  // };
+
+  {/* <input
+        type="email"
+        value={inputEmail}
+        onChange={(e) => setInputEmail(e.target.value)}
+        placeholder="Enter email to get data"
+      />
+      <button onClick={handleFetch}>Get data</button>
+      <p>
+        {fetchUser != null ? (
+          <DisplayData user={fetchUser} />
+        ) : (
+          "Enter Valid user"
+        )}
+      </p> */}
