@@ -1,30 +1,33 @@
 import "./assets/main.css";
+import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
-import Login from "./components/Login";
-import UserProfile from "./components/UserProfile";
-import Home from "./components/Home";
-import SignIn from "./components/SignIn";
-import DisplayTask from "./components/DisplayData";
-import DashBoard from "./components/DashBoard";
-import AddTask from "./components/AddTask";
-import UpdateTask from "./components/UpdateTask";
-import DeleteTask from "./components/DeleteTask";
+const Login = lazy(() => import("./components/Login"));
+const UserProfile = lazy(() => import("./components/UserProfile"));
+const Home = lazy(() => import("./components/Home"));
+const SignIn = lazy(() => import("./components/SignIn"));
+const DisplayTask = lazy(() => import("./components/DisplayData"));
+const DashBoard = lazy(() => import("./components/DashBoard"));
+const AddTask = lazy(() => import("./components/AddTask"));
+const UpdateTask = lazy(() => import("./components/UpdateTask"));
+const DeleteTask = lazy(() => import("./components/DeleteTask"));
 import "./App.css";
 const App = () => {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/profile" element={<UserProfile />} />
-        <Route path="/tasks" element={<DisplayTask />}></Route>
-        <Route path="/tasks/add" element={<AddTask />} />
-        <Route path="/tasks/update" element={<UpdateTask />} />
-        <Route path="/tasks/delete" element={<DeleteTask />} />
+      <Suspense>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/profile" element={<UserProfile />} />
+          <Route path="/tasks" element={<DisplayTask />}></Route>
+          <Route path="/tasks/add" element={<AddTask />} />
+          <Route path="/tasks/update" element={<UpdateTask />} />
+          <Route path="/tasks/delete" element={<DeleteTask />} />
 
-        <Route path="/dashboard" element={<DashBoard />} />
-      </Routes>
+          <Route path="/dashboard" element={<DashBoard />} />
+        </Routes>
+      </Suspense>
     </>
   );
 };
