@@ -9,7 +9,7 @@ import DashBoard from "./components/DashBoard";
 import AddTask from "./components/AddTask";
 import UpdateTask from "./components/UpdateTask";
 import DeleteTask from "./components/DeleteTask";
-
+import "./App.css";
 const App = () => {
   return (
     <>
