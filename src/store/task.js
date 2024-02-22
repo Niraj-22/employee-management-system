@@ -10,7 +10,7 @@ const taskSlice = createSlice({
       state.unshift(tasks);
     },
     logout: (state) => {
-      state = initialState;
+      state = [];
     },
   },
 });

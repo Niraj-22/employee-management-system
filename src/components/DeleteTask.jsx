@@ -16,6 +16,7 @@ const DeleteTask = () => {
   };
   const location = useLocation();
   const taskID = location.state;
+  console.log("🚀 ~ DeleteTask ~ taskID:", taskID);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
